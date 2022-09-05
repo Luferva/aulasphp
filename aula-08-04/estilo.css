@@ -1,0 +1,44 @@
+body{
+
+    font-size: 30px;
+    color: aqua;
+    background-color: blueviolet;
+}
+
+p{
+    font-size: 40px;
+    color: brown;
+    text-decoration: overline;
+    text-shadow: 4px 3px 10px black; 
+}
+
+p.pizza{
+    font-size: 40px;
+    color: blue;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    font-size: 40px;
+    color: white;
+}
+
+table{
+    border: 2px black double;
+    width: 30%;
+    outline: 3px green solid;
+    border-radius: 0px 0px 20px 20px;
+}
+
+table:hover{
+    background-color: blue;
+    border-radius: 15px 15px 0px 0px;
+    outline: 3px red solid;
+}
+
+/* p108, 115 e 116
