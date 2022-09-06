@@ -6,10 +6,13 @@ function somarDados ($a, $b)
     return $soma;
 }
 
-$result  = somarDados(3,6);
+function gravaLog ($id, $data, $cat, $tipo)
+{
+    include('config.php');
 
-echo $result
-
+    $query = "INSERT INTO log (id_user, data, descricao1, desccricao2) values ('$id', '$data', '$cat', '$tipo')";
+    $result = mysqli_query($con, $query);
+}
 
 
 

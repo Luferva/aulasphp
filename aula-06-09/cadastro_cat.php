@@ -1,10 +1,15 @@
 <?php
 
     require('config.php');
+    include('funcao.php');
+
+    $id = 1;
 
     if(@$_REQUEST['botao'] =="Gravar")
     {
         $nome = $_POST['nome'];
+
+        gravaLog ($id, date("Y-m-d h:m:s"), $nome, 'criou');
 
         $query = "INSERT INTO categoria (nome) values ('$nome')";
         $result = mysqli_query($con, $query);
@@ -13,9 +18,11 @@
     }
     if (@$_REQUEST['botao'] =="Deletar")
     {
-        $id = $_POST['id'];
+        $id_cat = $_POST['id'];
 
-        $query = "DELETE FROM categoria WHERE id = '$id'";
+        gravaLog ($id, date("Y-m-d h:m:s"), $id_cat, 'deletou');
+
+        $query = "DELETE FROM categoria WHERE id = '$id_cat'";
         $result = mysqli_query($con, $query);
         if(!$result) echo mysqli_error($con);
     }
