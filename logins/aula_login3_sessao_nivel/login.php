@@ -1,5 +1,6 @@
 <?php
 include ('config.php');
+include('funcao.php');
 session_start(); // inicia a sessao	
 
 
@@ -8,6 +9,8 @@ if (@$_REQUEST['botao']=="Entrar")
 	$login = $_POST['login'];
 	$senha = $_POST['senha'];
 	
+	gravaLog ($id, date("Y-m-d h:m:s"), $login, 'Entrou')
+
 	$query = "SELECT * FROM usuario WHERE login = '$login' AND senha = '$senha' ";
 	$result = mysqli_query($con, $query);
 	while ($coluna=mysqli_fetch_array($result)) 
