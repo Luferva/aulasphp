@@ -1,0 +1,2 @@
+1: criar a pasta uploads
+2: prestar atenção no <form> que é multidata
